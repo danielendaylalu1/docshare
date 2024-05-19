@@ -7,21 +7,21 @@ import ChatCard from "@/components/ChatCard";
 
 const page = () => {
   return (
-    <div className="h-full flex flex-col gap-y-8">
+    <div className="h-full flex flex-col gap-y-6">
       <div className="w-full flex justify-between">
         <IoIosArrowBack size={18} className="text-black cursor-pointer" />
         <h1 className=" text-primary text-sm ml-1 w-[90%] text-center">
           Community Chat
         </h1>
       </div>
-      <div className="no-scrollbar flex w-full gap-x-4 overflow-x-scroll">
-        <GroupCard docnum={25} title={"Cancer "} />
-        <GroupCard docnum={41} title={"HIV "} />
-        <GroupCard docnum={17} title={"Diabest"} />
-        <GroupCard docnum={75} title={"Hyper tension"} />
-        <GroupCard docnum={37} title={"Mental health"} />
+      <div className="no-scrollbar flex w-full min-h-[60px] gap-x-4 overflow-x-scroll">
+        <GroupCard docnum={25} title={"Cancer "} showUserList={false} />
+        <GroupCard docnum={41} title={"HIV "} showUserList={false} />
+        <GroupCard docnum={17} title={"Diabest"} showUserList={false} />
+        <GroupCard docnum={75} title={"Hyper tension"} showUserList={false} />
+        <GroupCard docnum={37} title={"Mental health"} showUserList={false} />
       </div>
-      <div className="h-[55vh] border border-black/35 rounded-xl flex flex-col gap-y-2 justify-between px-4 relative overflow-y-scroll no-scrollbar">
+      <div className="border-t border-black/35 flex flex-col gap-y-2 justify-between px-4 relative overflow-y-scroll no-scrollbar">
         <h2 className="py-2 text-xs text-center sticky top-0 bg-white flex-1">
           Cancer chat room
         </h2>
@@ -53,6 +53,13 @@ const page = () => {
               "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus nulla totam veritatis aliquid officia nesciunt, ipsaiure."
             }
             justify={""}
+          />
+          <ChatCard
+            name={"abebe"}
+            message={
+              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus nulla totam veritatis aliquid officia nesciunt, ipsaiure."
+            }
+            justify={"justify-end"}
           />
         </div>
         <div className="w-full sticky bottom-0">

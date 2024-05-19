@@ -25,7 +25,7 @@ const page = () => {
             </div>
           </div>
 
-          <Link href="home/doctorlist">
+          <Link href="home/doctorlist" className="w-full">
             <input
               type={"text"}
               placeholder={"search"}
