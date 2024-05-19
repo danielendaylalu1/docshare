@@ -4,13 +4,8 @@ import Form from "@/components/Form";
 
 const page = () => {
   return (
-    <main className="h-full">
-      <div className="h-full flex flex-col">
-        <div className="flex flex-col gap-y-4 w-full h-full my-2">
-          <Form />
-        </div>
-        <Navigation nextLink="home" />
-      </div>
+    <main className="h-full overflow-y-scroll no-scrollbar flex items-center">
+      <Form />
     </main>
   );
 };

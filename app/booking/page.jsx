@@ -8,7 +8,7 @@ import doc from "../../assets/doc1.png";
 
 const page = () => {
   return (
-    <main className="h-full">
+    <main className="h-full overflow-y-scroll">
       <div className="h-full flex flex-col gap-y-8">
         <div className="flex w-full items-center justify-between">
           <IoIosArrowBack size={18} className="text-black cursor-pointer" />
@@ -92,7 +92,6 @@ const page = () => {
         <button className="text-white bg-primary text-center p-3 rounded-xl">
           Next
         </button>
-        <Navigation nextLink="booking" />
       </div>
     </main>
   );

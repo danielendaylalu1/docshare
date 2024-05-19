@@ -2,23 +2,29 @@ import React from "react";
 import DoctorCard from "../../../components/DoctorCard";
 import doc from "../../../assets/doc1.png";
 import { IoIosArrowBack } from "react-icons/io";
+import DropDown from "@/components/DropDown";
 
 const page = () => {
+  const options = [
+    { value: "Diabets", label: "Diabets" },
+    { value: "Hiv", label: "Hiv" },
+    { value: "Cancer", label: "Cancer" },
+    { value: "Hiper tension", label: "Hiper tension" },
+    { value: "Mental health", label: "Mental health" },
+  ];
   return (
     <div className="flex flex-col gap-y-8">
-      <div className="w-full flex justify-between">
-        <IoIosArrowBack size={18} className="text-black cursor-pointer" />
-        <h1 className=" text-primary text-sm ml-1 w-[90%] text-center">
-          search doctor
-        </h1>
+      <div className="flex w-full gap-x-2">
+        <input
+          type={"text"}
+          autoFocus
+          placeholder={"search doctor"}
+          className="px-3 py-2 rounded-xl max-w-[60%] outline-none border-black/25 border-[1px]"
+        />
+        <div className="w-[40%]">
+          <DropDown options={options} />
+        </div>
       </div>
-
-      <input
-        type={"text"}
-        autoFocus
-        placeholder={"search doctor"}
-        className="px-3 py-2 rounded-xl outline-none border-black/25 border-[1px]"
-      />
       <DoctorCard
         img={doc}
         name={"Eyob naol"}

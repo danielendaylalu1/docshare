@@ -27,16 +27,16 @@ const DoctorCard = ({ showbook = true, img, name, desc, exp, rate }) => {
 
       <div className="flex flex-row justify-between gap-4 items-center w-full">
         <p
-          className={` ${
+          className={`p-3 ${
             !showbook ? " bg-primary/60 " : "text-white bg-primary "
-          } w-full text-xs px-4 py-4 rounded-xl text-center self-start cursor-pointer`}
+          } w-full text-xs rounded-xl text-center self-start cursor-pointer`}
         >
           {showbook ? "Book" : "Cancle"}
         </p>
         <p
-          className={`text-black ${
+          className={`text-black p-3 ${
             showbook ? " bg-primary/60 " : "text-white bg-primary "
-          } w-full text-xs px-4 py-4 rounded-xl text-center self-start cursor-pointer`}
+          } w-full text-xs rounded-xl text-center self-start cursor-pointer`}
         >
           {showbook ? "Profile" : "Reschedule"}
         </p>

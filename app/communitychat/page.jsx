@@ -5,11 +5,15 @@ import GroupCard from "@/components/GroupCard";
 import { IoMdSend } from "react-icons/io";
 import ChatCard from "@/components/ChatCard";
 
+import Link from "next/link";
+
 const page = () => {
   return (
     <div className="h-full flex flex-col gap-y-6">
       <div className="w-full flex justify-between">
-        <IoIosArrowBack size={18} className="text-black cursor-pointer" />
+        <Link href="/home">
+          <IoIosArrowBack size={18} className="text-black cursor-pointer" />
+        </Link>
         <h1 className=" text-primary text-sm ml-1 w-[90%] text-center">
           Community Chat
         </h1>
@@ -26,6 +30,13 @@ const page = () => {
           Cancer chat room
         </h2>
         <div className="flex flex-col w-full gap-y-4">
+          <ChatCard
+            name={"Anonums"}
+            message={
+              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus nulla totam veritatis aliquid officia nesciunt, ipsaiure."
+            }
+            justify={""}
+          />
           <ChatCard
             name={"Anonums"}
             message={
