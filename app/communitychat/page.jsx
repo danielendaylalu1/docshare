@@ -6,13 +6,14 @@ import { IoMdSend } from "react-icons/io";
 import ChatCard from "@/components/ChatCard";
 
 import Link from "next/link";
+import SpeechToText from "@/components/STT";
 
 const page = () => {
   return (
     <div className="h-full flex flex-col gap-y-6">
-      <div className="w-full flex justify-between">
+      <div className="w-full flex justify-between items-center pt-3">
         <Link href="/home">
-          <IoIosArrowBack size={18} className="text-black cursor-pointer" />
+          <IoIosArrowBack size={22} className="text-black cursor-pointer" />
         </Link>
         <h1 className=" text-primary text-sm ml-1 w-[90%] text-center">
           Community Chat
@@ -85,6 +86,7 @@ const page = () => {
           />
         </div>
       </div>
+      <SpeechToText />
     </div>
   );
 };

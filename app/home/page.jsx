@@ -30,11 +30,22 @@ const page = () => {
       <div className="flex flex-col gap-y-3 w-full">
         <h2 className="text-black/55 font-medium text-sm">Community Groups</h2>
         <div className="no-scrollbar flex w-full gap-x-4 overflow-x-scroll">
-          <GroupCard docnum={25} title={"Cancer "} />
-          <GroupCard docnum={41} title={"HIV "} />
-          <GroupCard docnum={17} title={"Diabest"} />
-          <GroupCard docnum={75} title={"Hyper tension"} />
-          <GroupCard docnum={37} title={"Mental health"} />
+          <Link href={"/communitychat"}>
+            <GroupCard docnum={25} title={"Cancer "} />
+          </Link>
+          <Link href={"/communitychat"}>
+            <GroupCard docnum={41} title={"HIV "} />
+          </Link>
+          <Link href={"/communitychat"}>
+            <GroupCard docnum={17} title={"Diabest"} />
+          </Link>
+          <Link href={"/communitychat"}>
+            <GroupCard docnum={75} title={"Hyper tension"} />
+          </Link>
+          <Link href={"/communitychat"}>
+            {" "}
+            <GroupCard docnum={37} title={"Mental health"} />
+          </Link>
         </div>
       </div>
 
@@ -42,22 +53,37 @@ const page = () => {
         <h2 className="text-black/55 font-medium text-sm">Medical doctors</h2>
         <div className="no-scrollbar flex w-full gap-x-4 overflow-x-scroll">
           <div className="min-w-[70%]">
-            <DoctorCard
-              img={doc}
-              name={"Eyob naol"}
-              exp={"6"}
-              desc={"In publishing and graphic design, Lorem ipsum is a"}
-              rate={"⭐⭐⭐⭐⭐"}
-            />
+            <Link href={"/booking"}>
+              <DoctorCard
+                img={doc}
+                name={"Eyob naol"}
+                exp={"6"}
+                desc={"In publishing and graphic design, Lorem ipsum is a"}
+                rate={"⭐⭐⭐⭐⭐"}
+              />
+            </Link>
           </div>
           <div className="min-w-[70%]">
-            <DoctorCard
-              img={doc}
-              name={"Daniel aman"}
-              exp={"3"}
-              desc={"In publishing and graphic design, Lorem ipsum is a"}
-              rate={"⭐⭐⭐"}
-            />
+            <Link href={"/booking"}>
+              <DoctorCard
+                img={doc}
+                name={"Eyob naol"}
+                exp={"6"}
+                desc={"In publishing and graphic design, Lorem ipsum is a"}
+                rate={"⭐⭐⭐⭐⭐"}
+              />
+            </Link>
+          </div>
+          <div className="min-w-[70%]">
+            <Link href={"/booking"}>
+              <DoctorCard
+                img={doc}
+                name={"Eyob naol"}
+                exp={"6"}
+                desc={"In publishing and graphic design, Lorem ipsum is a"}
+                rate={"⭐⭐⭐⭐⭐"}
+              />
+            </Link>
           </div>
         </div>
       </div>

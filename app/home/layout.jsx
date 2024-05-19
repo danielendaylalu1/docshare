@@ -52,7 +52,9 @@ export default function RootLayout({ children }) {
           </Link>
         </div>
         <div className="flex items-center justify-center py-1 px-4 rounded-xl min-w-[60px] ">
-          <CgProfile size={24} />
+          <Link href={"/profile"}>
+            <CgProfile size={24} />
+          </Link>
         </div>
       </div>
     </div>

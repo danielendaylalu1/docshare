@@ -3,6 +3,7 @@ import DoctorCard from "../../../components/DoctorCard";
 import doc from "../../../assets/doc1.png";
 import { IoIosArrowBack } from "react-icons/io";
 import DropDown from "@/components/DropDown";
+import Link from "next/link";
 
 const page = () => {
   const options = [
@@ -25,34 +26,42 @@ const page = () => {
           <DropDown options={options} />
         </div>
       </div>
-      <DoctorCard
-        img={doc}
-        name={"Eyob naol"}
-        exp={"4"}
-        desc={"In publishing and graphic design, Lorem ipsum is a"}
-        rate={"⭐⭐⭐⭐⭐"}
-      />
-      <DoctorCard
-        img={doc}
-        name={"Aman daniel"}
-        exp={"5"}
-        desc={"In publishing and graphic design, Lorem ipsum is a"}
-        rate={"⭐⭐⭐"}
-      />
-      <DoctorCard
-        img={doc}
-        name={"Naol aman"}
-        exp={"6"}
-        desc={"In publishing and graphic design, Lorem ipsum is a"}
-        rate={"⭐⭐⭐⭐⭐"}
-      />
-      <DoctorCard
-        img={doc}
-        name={"Daniel eyob"}
-        exp={"3"}
-        desc={"In publishing and graphic design, Lorem ipsum is a"}
-        rate={"⭐⭐⭐"}
-      />
+      <Link href={"/home/appointments"}>
+        <DoctorCard
+          img={doc}
+          name={"Eyob naol"}
+          exp={"4"}
+          desc={"In publishing and graphic design, Lorem ipsum is a"}
+          rate={"⭐⭐⭐⭐⭐"}
+        />
+      </Link>
+      <Link href={"/home/appointments"}>
+        <DoctorCard
+          img={doc}
+          name={"Eyob naol"}
+          exp={"4"}
+          desc={"In publishing and graphic design, Lorem ipsum is a"}
+          rate={"⭐⭐⭐⭐⭐"}
+        />
+      </Link>
+      <Link href={"/home/appointments"}>
+        <DoctorCard
+          img={doc}
+          name={"Eyob naol"}
+          exp={"4"}
+          desc={"In publishing and graphic design, Lorem ipsum is a"}
+          rate={"⭐⭐⭐⭐⭐"}
+        />
+      </Link>
+      <Link href={"/home/appointments"}>
+        <DoctorCard
+          img={doc}
+          name={"Eyob naol"}
+          exp={"4"}
+          desc={"In publishing and graphic design, Lorem ipsum is a"}
+          rate={"⭐⭐⭐⭐⭐"}
+        />
+      </Link>
     </div>
   );
 };

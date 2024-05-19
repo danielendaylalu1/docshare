@@ -5,13 +5,16 @@ import { IoIosArrowBack } from "react-icons/io";
 import DoctorCard from "@/components/DoctorCard";
 
 import doc from "../../assets/doc1.png";
+import Link from "next/link";
 
 const page = () => {
   return (
     <main className="h-full overflow-y-scroll">
       <div className="h-full flex flex-col gap-y-8">
-        <div className="flex w-full items-center justify-between">
-          <IoIosArrowBack size={18} className="text-black cursor-pointer" />
+        <div className="flex w-full items-center justify-between  pt-3">
+          <Link href={"/home"}>
+            <IoIosArrowBack size={22} className="text-black cursor-pointer" />
+          </Link>
           <h2 className="text-xl text-primary min-w-[90%] text-center ">
             Booking
           </h2>
@@ -38,14 +41,29 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex justify-between gap-x-2 bg-black/15 rounded-xl p-3">
-          <p className="text-xs">Mon</p>
-          <p className="text-xs">Tue</p>
-          <p className="text-xs">Wed</p>
-          <p className="text-xs">Thu</p>
-          <p className="text-xs">Fri</p>
-          <p className="text-xs">Sat</p>
-          <p className="text-xs">Sun</p>
+        <div className="w-full flex justify-between gap-x-4 bg-black/15 rounded-xl p-3">
+          <div className="flex flex-col justify-around items-center gap-y-4">
+            <p className="text-xs">Mon</p>
+            <div className="flex flex-col  items-center gap-y-2">
+              <p className="text-xs">afternoon</p>
+              <p className="text-xs">10:00 - 12:00</p>
+            </div>
+          </div>
+          <div className="flex flex-col  justify-around items-center gap-y-4">
+            <p className="text-xs">Tue</p>
+            <div className="flex flex-col  gap-y-2 items-center">
+              <p className="text-xs">afternoon</p>
+              <p className="text-xs">6:00 - 8:00</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col  justify-around items-center gap-y-4">
+            <p className="text-xs">Sat</p>
+            <div className="flex flex-col  gap-y-2 items-center">
+              <p className="text-xs">morning</p>
+              <p className="text-xs">4:00 - 6:00</p>
+            </div>
+          </div>
         </div>
         <div className="flex flex-col gap-y-3 w-full">
           <h2 className="text-black/55 font-medium text-sm">Book</h2>
@@ -89,9 +107,12 @@ const page = () => {
             </div>
           </div>
         </div>
-        <button className="text-white bg-primary text-center p-3 rounded-xl">
-          Next
-        </button>
+        <Link
+          href={"/payment"}
+          className="text-white bg-primary text-center p-3 rounded-xl"
+        >
+          <button>Next</button>
+        </Link>
       </div>
     </main>
   );
