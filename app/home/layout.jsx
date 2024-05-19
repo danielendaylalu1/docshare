@@ -3,8 +3,8 @@ import { RiHomeLine } from "react-icons/ri";
 import { SlCalender } from "react-icons/sl";
 import { IoChatbubblesOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
-import { AiFillAlert } from "react-icons/ai";
-<AiFillAlert />;
+// import { AiFillAlert } from "react-icons/ai";
+import { AiOutlineAlert } from "react-icons/ai";
 
 export default function RootLayout({ children }) {
   return (
@@ -21,8 +21,8 @@ export default function RootLayout({ children }) {
         <div className="flex items-center justify-center py-1 px-4 rounded-xl min-w-[60px] ">
           <SlCalender size={20} />
         </div>
-        <div className="flex items-center justify-center py-1 px-4 rounded-xl min-w-[60px] ">
-          <AiFillAlert size={28} className="text-red-500" />
+        <div className="flex items-center justify-center w-12 h-12 mb-5 rounded-full bg-white border-2 border-primary/20">
+          <AiOutlineAlert size={20} className="text-red-400" />
         </div>
         <div className="flex items-center justify-center py-1 px-4 rounded-xl min-w-[60px] ">
           <IoChatbubblesOutline size={20} />
