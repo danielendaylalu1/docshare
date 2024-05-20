@@ -26,7 +26,7 @@ const page = () => {
           <DropDown options={options} />
         </div>
       </div>
-      <Link href={"/home/appointments"}>
+      <Link href={"/booking"}>
         <DoctorCard
           img={doc}
           name={"Eyob naol"}
@@ -35,7 +35,7 @@ const page = () => {
           rate={"⭐⭐⭐⭐⭐"}
         />
       </Link>
-      <Link href={"/home/appointments"}>
+      <Link href={"/booking"}>
         <DoctorCard
           img={doc}
           name={"Eyob naol"}
@@ -44,7 +44,7 @@ const page = () => {
           rate={"⭐⭐⭐⭐⭐"}
         />
       </Link>
-      <Link href={"/home/appointments"}>
+      <Link href={"/booking"}>
         <DoctorCard
           img={doc}
           name={"Eyob naol"}
@@ -53,7 +53,7 @@ const page = () => {
           rate={"⭐⭐⭐⭐⭐"}
         />
       </Link>
-      <Link href={"/home/appointments"}>
+      <Link href={"/booking"}>
         <DoctorCard
           img={doc}
           name={"Eyob naol"}
