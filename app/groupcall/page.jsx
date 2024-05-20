@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoCallSharp } from "react-icons/io5";

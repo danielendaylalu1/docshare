@@ -1,37 +1,44 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
-
 import { CiMicrophoneOn } from "react-icons/ci";
 
 const SpeechToText = () => {
   const [transcript, setTranscript] = useState("");
   const [lst, setLst] = useState(false);
+  const [recognition, setRecognition] = useState(null);
 
-  let recognition = new window.webkitSpeechRecognition();
-
-  // Create a new instance of SpeechRecognition
-
-  recognition.lang = "am-ET"; // Set the language for recognition
-  recognition.interimResults = false; // Set interim results to false to get final transcript only
-  recognition.maxAlternatives = 1; // Set maximum number of alternatives
-  //   recognition.continus = true;
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      let recog = new window.webkitSpeechRecognition();
+      recog.lang = "am-ET";
+      recog.interimResults = false;
+      recog.maxAlternatives = 1;
+      setRecognition(recog);
+    }
+  }, []);
 
   const startListening = () => {
-    recognition.start(); // Start speech recognition
-    setLst(true);
+    if (recognition) {
+      recognition.start();
+      setLst(true);
+    }
   };
 
   const stopListening = () => {
-    recognition.stop(); // Start speech recognition
-    setLst(false);
+    if (recognition) {
+      recognition.stop();
+      setLst(false);
+    }
   };
 
-  recognition.onresult = (event) => {
-    const result = event.results[0][0].transcript; // Get the transcript from the event
-    setTranscript((prev) => prev + " " + result); // Set the transcript state
-    stopListening();
-  };
+  useEffect(() => {
+    if (recognition) {
+      recognition.onresult = (event) => {
+        const result = event.results[0][0].transcript;
+        setTranscript((prev) => prev + " " + result);
+        stopListening();
+      };
+    }
+  }, [recognition]);
 
   const [showtran, setShowtran] = useState(false);
 
@@ -39,10 +46,8 @@ const SpeechToText = () => {
     <div className=" bg-red-200 w-full rounded-xl flex gap-x-4 p-4">
       <button
         onClick={() => {
-          if (recognition) {
-            startListening();
-          }
-          showtran(true);
+          startListening();
+          setShowtran(true);
         }}
       >
         <div className="p-2 rounded-xl bg-red-300 bottom-3 left-3">
