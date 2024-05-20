@@ -4,7 +4,7 @@ import Form from "@/components/Form";
 
 const page = () => {
   return (
-    <main className="h-full overflow-y-scroll no-scrollbar flex items-center">
+    <main className="h-full overflow-y-scroll no-scrollbar">
       <Form />
     </main>
   );

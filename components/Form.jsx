@@ -26,6 +26,8 @@ const Form = () => {
         <h1 className="text-primary text-sm ml-1">History</h1>
         <DropDown options={options} />
       </div>
+      <InputField title={"weight"} typ={"text"} />
+      <InputField title={"height"} typ={"text"} />
       <InputField title={"Password"} typ={"text"} />
       <button className="text-primary px-3 py-2 min-w-[130px] rounded-xl outline-none border-black/25 border-[1px] self-center">
         <Link href={"/home"}>Sumbit</Link>

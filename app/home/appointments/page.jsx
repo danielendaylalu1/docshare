@@ -1,6 +1,11 @@
 import React from "react";
 import DoctorCard from "@/components/DoctorCard";
-import doc from "../../../assets/doc1.png";
+
+import doc1 from "../../../assets/doc1.jpeg";
+import doc2 from "../../../assets/doc2.jpeg";
+import doc3 from "../../../assets/doc3.jpeg";
+import doc4 from "../../../assets/doc4.jpeg";
+
 export default function page() {
   return (
     <div className="flex flex-col gap-y-4">
@@ -15,23 +20,15 @@ export default function page() {
       </div>
       <div className="flex justify-center items-center gap-y-8 flex-col">
         <DoctorCard
-          img={doc}
+          img={doc3}
           showbook={false}
-          name={"Eyob naol"}
+          name={"Mahlet naol"}
           exp={"6"}
           desc={"Jun 21, 2:00 PM"}
           rate={"⭐⭐⭐⭐⭐"}
         />
         <DoctorCard
-          img={doc}
-          showbook={false}
-          name={"Eyob naol"}
-          exp={"6"}
-          desc={"Jun 21, 2:00 PM"}
-          rate={"⭐⭐⭐⭐⭐"}
-        />
-        <DoctorCard
-          img={doc}
+          img={doc1}
           showbook={false}
           name={"Eyob naol"}
           exp={"6"}

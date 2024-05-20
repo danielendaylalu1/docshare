@@ -48,9 +48,9 @@ const page = () => {
           <h2 className="text-sm text-black">Procced with telebirr</h2>
         </div>
       </div>
-      <Link href={"/home"} className="w-[80%] self-center">
+      <Link href={"/groupcall"} className="w-[80%] self-center">
         <div className="flex cursor-pointer justify-center items-center gap-x-4 w-[100%] bg-primary/50 rounded-xl px-4 py-4">
-          <h2 className="text-sm text-black">Go back home</h2>
+          <h2 className="text-sm text-black">Join meeting</h2>
         </div>
       </Link>
     </div>

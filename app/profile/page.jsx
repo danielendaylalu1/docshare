@@ -5,6 +5,9 @@ import { FaCheck } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 
 import { IoMdSend } from "react-icons/io";
+import Image from "next/image";
+
+import user1 from "../../assets/user1.jpeg";
 
 const page = () => {
   return (
@@ -20,8 +23,8 @@ const page = () => {
       <div className="flex flex-col gap-y-6 overflow-y-scroll no-scrollbar">
         <div className="flex flex-col gap-y-10 items-center bg-primary/15 p-4 rounded-xl ">
           <div className="flex flex-col gap-y-2 items-center">
-            <div className="flex w-32 h-32 bg-primary items-center justify-center rounded-full">
-              <h1 className="text-xl text-primary ">Logo</h1>
+            <div className="flex w-32 h-32 bg-primary items-center justify-center rounded-full overflow-hidden">
+              <Image src={user1} alt="user" />
             </div>
             <h1 className="text-xl font-bold text-black/70 ">Naol daniel</h1>
           </div>

@@ -5,8 +5,8 @@ import Image from "next/image";
 const DoctorCard = ({ showbook = true, img, name, desc, exp, rate }) => {
   return (
     <div className="w-[100%] flex items-center flex-col gap-4 p-3 bg-primary/25 rounded-xl">
-      <div className="flex justify-between items-center">
-        <div className="w-[40%] h-full flex justify-end items-end">
+      <div className="flex justify-between items-center gap-x-2">
+        <div className="w-[40%] h-full flex justify-end items-end rounded-xl overflow-hidden">
           <Image src={img} alt="doctor" className="rounded-md" />
         </div>
         <div className="w-[60%] flex flex-col gap-y-3">

@@ -4,7 +4,7 @@ import Navigation from "@/components/Navigation";
 import { IoIosArrowBack } from "react-icons/io";
 import DoctorCard from "@/components/DoctorCard";
 
-import doc from "../../assets/doc1.png";
+import doc1 from "../../assets/doc1.jpeg";
 import Link from "next/link";
 
 const page = () => {
@@ -20,8 +20,8 @@ const page = () => {
           </h2>
         </div>
         <DoctorCard
-          img={doc}
-          name={"Daniel aman"}
+          img={doc1}
+          name={"Aman naol"}
           exp={"3"}
           desc={
             "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying"

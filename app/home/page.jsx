@@ -1,7 +1,10 @@
 import GroupCard from "@/components/GroupCard";
 import React from "react";
 
-import doc from "../../assets/doc1.png";
+import doc1 from "../../assets/doc1.jpeg";
+import doc2 from "../../assets/doc2.jpeg";
+import doc3 from "../../assets/doc3.jpeg";
+// import doc4 from "../../assets/doc4.jpeg";
 import DoctorCard from "@/components/DoctorCard";
 import Link from "next/link";
 // import Fakesearchbar from "@/components/fakesearchbar";
@@ -17,26 +20,16 @@ const page = () => {
         />
       </Link>
 
-      <div className="w-full flex gap-x-2 overflow-x-scroll no-scrollbar min-h-[25vh]">
+      <div className="w-full flex gap-x-2 overflow-x-scroll no-scrollbar min-h-[20vh]">
         <div className="p-6 min-w-[80%] bg-primary rounded-xl flex flex-col gap-y-4">
           <h2 className="text-white font-medium text-base">
-            Near Medical Centers
+            Call to our call center
           </h2>
-          <p className="text-white/90 text-xs">
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying
-          </p>
+          <p className="text-white/90 text-xs">+251966356610</p>
         </div>
         <div className="p-6 min-w-[80%] bg-primary rounded-xl flex flex-col gap-y-4">
-          <h2 className="text-white font-medium text-base">
-            Near Medical Centers
-          </h2>
-          <p className="text-white/90 text-xs">
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying
-          </p>
+          <h2 className="text-white font-medium text-base">Use our ussd</h2>
+          <p className="text-white/90 text-xs">955</p>
         </div>
       </div>
 
@@ -68,8 +61,8 @@ const page = () => {
           <div className="min-w-[70%]">
             <Link href={"/booking"}>
               <DoctorCard
-                img={doc}
-                name={"Eyob naol"}
+                img={doc1}
+                name={"Aman naol"}
                 exp={"6"}
                 desc={"In publishing and graphic design, Lorem ipsum is a"}
                 rate={"⭐⭐⭐⭐⭐"}
@@ -79,8 +72,8 @@ const page = () => {
           <div className="min-w-[70%]">
             <Link href={"/booking"}>
               <DoctorCard
-                img={doc}
-                name={"Eyob naol"}
+                img={doc3}
+                name={"Mahlet naol"}
                 exp={"6"}
                 desc={"In publishing and graphic design, Lorem ipsum is a"}
                 rate={"⭐⭐⭐⭐⭐"}
@@ -90,7 +83,7 @@ const page = () => {
           <div className="min-w-[70%]">
             <Link href={"/booking"}>
               <DoctorCard
-                img={doc}
+                img={doc2}
                 name={"Eyob naol"}
                 exp={"6"}
                 desc={"In publishing and graphic design, Lorem ipsum is a"}

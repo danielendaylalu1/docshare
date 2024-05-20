@@ -1,6 +1,9 @@
 import React from "react";
 import DoctorCard from "../../../components/DoctorCard";
-import doc from "../../../assets/doc1.png";
+import doc1 from "../../../assets/doc1.jpeg";
+import doc2 from "../../../assets/doc2.jpeg";
+import doc3 from "../../../assets/doc3.jpeg";
+import doc4 from "../../../assets/doc4.jpeg";
 import { IoIosArrowBack } from "react-icons/io";
 import DropDown from "@/components/DropDown";
 import Link from "next/link";
@@ -28,7 +31,25 @@ const page = () => {
       </div>
       <Link href={"/booking"}>
         <DoctorCard
-          img={doc}
+          img={doc1}
+          name={"Aman naol"}
+          exp={"4"}
+          desc={"In publishing and graphic design, Lorem ipsum is a"}
+          rate={"⭐⭐⭐⭐⭐"}
+        />
+      </Link>
+      <Link href={"/booking"}>
+        <DoctorCard
+          img={doc3}
+          name={"Betel aman"}
+          exp={"4"}
+          desc={"In publishing and graphic design, Lorem ipsum is a"}
+          rate={"⭐⭐⭐⭐⭐"}
+        />
+      </Link>
+      <Link href={"/booking"}>
+        <DoctorCard
+          img={doc2}
           name={"Eyob naol"}
           exp={"4"}
           desc={"In publishing and graphic design, Lorem ipsum is a"}
@@ -37,26 +58,8 @@ const page = () => {
       </Link>
       <Link href={"/booking"}>
         <DoctorCard
-          img={doc}
-          name={"Eyob naol"}
-          exp={"4"}
-          desc={"In publishing and graphic design, Lorem ipsum is a"}
-          rate={"⭐⭐⭐⭐⭐"}
-        />
-      </Link>
-      <Link href={"/booking"}>
-        <DoctorCard
-          img={doc}
-          name={"Eyob naol"}
-          exp={"4"}
-          desc={"In publishing and graphic design, Lorem ipsum is a"}
-          rate={"⭐⭐⭐⭐⭐"}
-        />
-      </Link>
-      <Link href={"/booking"}>
-        <DoctorCard
-          img={doc}
-          name={"Eyob naol"}
+          img={doc4}
+          name={"Mahlet naol"}
           exp={"4"}
           desc={"In publishing and graphic design, Lorem ipsum is a"}
           rate={"⭐⭐⭐⭐⭐"}
