@@ -12,13 +12,15 @@ export default function RootLayout({ children }) {
   return (
     <div className="h-full flex flex-col gap-y-2">
       <div className="w-full flex justify-between items-center">
-        <div className="flex gap-x-3 cursor-pointer">
-          <div className="w-10 h-10 rounded-full bg-primary"></div>
-          <div className="flex flex-col justify-center">
-            <h2 className="text-sm font-bolds">Daniel aman</h2>
-            <h2 className="text-xs text-black/65">📍Addis ababa, jemo</h2>
+        <Link href={"/profile"}>
+          <div className="flex gap-x-3 cursor-pointer">
+            <div className="w-10 h-10 rounded-full bg-primary"></div>
+            <div className="flex flex-col justify-center">
+              <h2 className="text-sm font-bolds">Daniel aman</h2>
+              <h2 className="text-xs text-black/65">📍Addis ababa, jemo</h2>
+            </div>
           </div>
-        </div>
+        </Link>
         <div>
           <Link href={"/home/notification"}>
             <IoMdNotificationsOutline size={24} className="cursor-pointer" />

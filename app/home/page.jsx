@@ -17,16 +17,29 @@ const page = () => {
         />
       </Link>
 
-      <div className="p-6 w-full bg-primary rounded-xl flex flex-col gap-y-4">
-        <h2 className="text-white font-medium text-base">
-          Near Medical Centers
-        </h2>
-        <p className="text-white/90 text-xs">
-          In publishing and graphic design, Lorem ipsum is a placeholder text
-          commonly used to demonstrate the visual form of a document or a
-          typeface without relying
-        </p>
+      <div className="w-full flex gap-x-2 overflow-x-scroll no-scrollbar min-h-[25vh]">
+        <div className="p-6 min-w-[80%] bg-primary rounded-xl flex flex-col gap-y-4">
+          <h2 className="text-white font-medium text-base">
+            Near Medical Centers
+          </h2>
+          <p className="text-white/90 text-xs">
+            In publishing and graphic design, Lorem ipsum is a placeholder text
+            commonly used to demonstrate the visual form of a document or a
+            typeface without relying
+          </p>
+        </div>
+        <div className="p-6 min-w-[80%] bg-primary rounded-xl flex flex-col gap-y-4">
+          <h2 className="text-white font-medium text-base">
+            Near Medical Centers
+          </h2>
+          <p className="text-white/90 text-xs">
+            In publishing and graphic design, Lorem ipsum is a placeholder text
+            commonly used to demonstrate the visual form of a document or a
+            typeface without relying
+          </p>
+        </div>
       </div>
+
       <div className="flex flex-col gap-y-3 w-full">
         <h2 className="text-black/55 font-medium text-sm">Community Groups</h2>
         <div className="no-scrollbar flex w-full gap-x-4 overflow-x-scroll">

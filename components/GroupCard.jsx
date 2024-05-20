@@ -1,8 +1,15 @@
 import React from "react";
 
-const GroupCard = ({ title, docnum = 12, showUserList = true }) => {
+const GroupCard = ({
+  title,
+  docnum = 12,
+  showUserList = true,
+  clr = "bg-primary/75",
+}) => {
   return (
-    <div className="min-w-[120px] flex flex-col gap-y-2 justify-between items-start bg-primary/75 text-white text-sm rounded-xl p-2">
+    <div
+      className={`min-w-[120px] flex flex-col gap-y-2 justify-between items-start ${clr} text-white text-sm rounded-xl p-2`}
+    >
       <div>{title}</div>
       <div className="text-white/60">{docnum} members</div>
       {showUserList && (
