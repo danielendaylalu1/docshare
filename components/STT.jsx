@@ -29,9 +29,16 @@ const SpeechToText = () => {
     stopListening();
   };
 
+  const [showtran, setShowtran] = useState(false);
+
   return (
     <div className=" bg-red-200 w-full rounded-xl flex gap-x-4 p-4">
-      <button onClick={startListening}>
+      <button
+        onClick={() => {
+          startListening();
+          showtran(true);
+        }}
+      >
         <div className="p-2 rounded-xl bg-red-300 bottom-3 left-3">
           <CiMicrophoneOn color="white" />
         </div>
