@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { CiMicrophoneOn } from "react-icons/ci";
 
@@ -8,7 +8,11 @@ const SpeechToText = () => {
   const [transcript, setTranscript] = useState("");
   const [lst, setLst] = useState(false);
 
-  const recognition = new window.webkitSpeechRecognition();
+  let [recognition, setRecognition] = useState(null);
+
+  useEffect(() => {
+    setRecognition(new window.webkitSpeechRecognition());
+  }, []);
 
   // Create a new instance of SpeechRecognition
 
@@ -18,19 +22,21 @@ const SpeechToText = () => {
   //   recognition.continus = true;
 
   const startListening = () => {
-    recognition.start(); // Start speech recognition
+    recognition?.start(); // Start speech recognition
     setLst(true);
   };
 
   const stopListening = () => {
-    recognition.stop(); // Start speech recognition
+    recognition?.stop(); // Start speech recognition
     setLst(false);
   };
-  recognition.onresult = (event) => {
-    const result = event.results[0][0].transcript; // Get the transcript from the event
-    setTranscript((prev) => prev + " " + result); // Set the transcript state
-    stopListening();
-  };
+  if (recognition !== null) {
+    recognition.onresult = (event) => {
+      const result = event.results[0][0].transcript; // Get the transcript from the event
+      setTranscript((prev) => prev + " " + result); // Set the transcript state
+      stopListening();
+    };
+  }
 
   const [showtran, setShowtran] = useState(false);
 
