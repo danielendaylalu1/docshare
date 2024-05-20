@@ -39,7 +39,7 @@ const page = () => {
         <div className="flex flex-col gap-y-10 items-center bg-primary/15 p-4 rounded-xl ">
           <div className="flex flex-col gap-y-2 items-center">
             <h1 className="text-xl text-primary ">
-              Taken your medicine time is now
+              Take your medicine time is now
             </h1>
             <h1 className="text-lg text-black/50 ">
               Time 6:00 am 1pill amoxaciline
@@ -59,17 +59,18 @@ const page = () => {
           <div className="flex flex-col gap-y-2 items-center">
             <h1 className="text-xl text-primary ">Daily health tips</h1>
             <h1 className="text-base text-black/50 text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Maintain a Healthy Diet:
             </h1>
             <h1 className="text-sm text-black/70 text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit.
+              - Focus on foods with a low glycemic index, such as whole grains,
+              vegetables, fruits, and lean proteins. - Limit your intake of
+              sugary, high-carbohydrate foods and drinks. - Eat regular,
+              balanced meals to help manage your blood sugar levels. - Consult a
+              registered dietitian to develop a personalized meal plan.
             </h1>
             <div className="w-full relative mt-3">
               <h1 className="text-sm text-black/70 m-1">
-                What daily tips do you want
+                What Healthy tips do you want
               </h1>
               <input
                 type={"text"}
