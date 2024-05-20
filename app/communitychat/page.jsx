@@ -6,7 +6,7 @@ import { IoMdSend } from "react-icons/io";
 import ChatCard from "@/components/ChatCard";
 
 import Link from "next/link";
-import SpeechToText from "@/components/STT";
+// import SpeechToText from "@/components/STT";
 
 const page = () => {
   return (
@@ -86,7 +86,7 @@ const page = () => {
           />
         </div>
       </div>
-      <SpeechToText />
+      {/* <SpeechToText /> */}
     </div>
   );
 };

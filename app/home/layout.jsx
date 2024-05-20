@@ -20,7 +20,9 @@ export default function RootLayout({ children }) {
           </div>
         </div>
         <div>
-          <IoMdNotificationsOutline size={24} className="cursor-pointer" />
+          <Link href={"/home/notification"}>
+            <IoMdNotificationsOutline size={24} className="cursor-pointer" />
+          </Link>
         </div>
       </div>
       <div className="min-w-full min-h-[85%] overflow-y-scroll py-2 no-scrollbar">
