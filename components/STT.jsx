@@ -11,7 +11,9 @@ const SpeechToText = () => {
   let [recognition, setRecognition] = useState(null);
 
   useEffect(() => {
-    setRecognition(new window.webkitSpeechRecognition());
+    if (window) {
+      setRecognition(new window.webkitSpeechRecognition());
+    }
   }, []);
 
   // Create a new instance of SpeechRecognition
