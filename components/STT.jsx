@@ -7,7 +7,10 @@ import { CiMicrophoneOn } from "react-icons/ci";
 const SpeechToText = () => {
   const [transcript, setTranscript] = useState("");
   const [lst, setLst] = useState(false);
-  const recognition = new window.webkitSpeechRecognition(); // Create a new instance of SpeechRecognition
+
+  const recognition = new window.webkitSpeechRecognition();
+
+  // Create a new instance of SpeechRecognition
 
   recognition.lang = "am-ET"; // Set the language for recognition
   recognition.interimResults = false; // Set interim results to false to get final transcript only
@@ -35,7 +38,9 @@ const SpeechToText = () => {
     <div className=" bg-red-200 w-full rounded-xl flex gap-x-4 p-4">
       <button
         onClick={() => {
-          startListening();
+          if (recognition) {
+            startListening();
+          }
           showtran(true);
         }}
       >
