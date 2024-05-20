@@ -12,6 +12,9 @@ import doc3 from "../../assets/doc3.jpeg";
 import user1 from "../../assets/user1.jpeg";
 import user2 from "../../assets/user2.jpeg";
 
+import { CiMicrophoneOn } from "react-icons/ci";
+import SpeechToText from "@/components/STT";
+
 export default function page() {
   return (
     <div className="h-full relative flex flex-col justify-between">
@@ -20,6 +23,9 @@ export default function page() {
           <Link href={"/home"}>
             <IoIosArrowBack color="white" />
           </Link>
+        </div>
+        <div className="absolute p-2 bottom-3 left-3 flex gap-x-2">
+          <SpeechToText />
         </div>
         <div className="w-[60%] rounded-xl overflow-hidden">
           <Image src={doc3} alt="doctor" />

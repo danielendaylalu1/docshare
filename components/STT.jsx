@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 
+import { CiMicrophoneOn } from "react-icons/ci";
+
 const SpeechToText = () => {
   const [transcript, setTranscript] = useState("");
   const [lst, setLst] = useState(false);
@@ -28,11 +30,13 @@ const SpeechToText = () => {
   };
 
   return (
-    <div className="fixed bottom-6 bg-red-200 w-full">
+    <div className=" bg-red-200 w-full rounded-xl flex gap-x-4 p-4">
       <button onClick={startListening}>
-        {lst ? "Listening" : "Start Listening"}
+        <div className="p-2 rounded-xl bg-red-300 bottom-3 left-3">
+          <CiMicrophoneOn color="white" />
+        </div>
       </button>
-      <p>Transcript: {transcript}</p>
+      <p className="bg-red-300 p-4">Transcript: {transcript}</p>
     </div>
   );
 };
