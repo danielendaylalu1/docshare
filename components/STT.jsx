@@ -1,3 +1,4 @@
+"use clint";
 import React, { useEffect, useState } from "react";
 import { CiMicrophoneOn } from "react-icons/ci";
 
