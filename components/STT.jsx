@@ -8,13 +8,7 @@ const SpeechToText = () => {
   const [transcript, setTranscript] = useState("");
   const [lst, setLst] = useState(false);
 
-  let [recognition, setRecognition] = useState(null);
-
-  useEffect(() => {
-    if (window) {
-      setRecognition(new window.webkitSpeechRecognition());
-    }
-  }, []);
+  let recognition = new window.webkitSpeechRecognition();
 
   // Create a new instance of SpeechRecognition
 
@@ -24,21 +18,20 @@ const SpeechToText = () => {
   //   recognition.continus = true;
 
   const startListening = () => {
-    recognition?.start(); // Start speech recognition
+    recognition.start(); // Start speech recognition
     setLst(true);
   };
 
   const stopListening = () => {
-    recognition?.stop(); // Start speech recognition
+    recognition.stop(); // Start speech recognition
     setLst(false);
   };
-  if (recognition !== null) {
-    recognition.onresult = (event) => {
-      const result = event.results[0][0].transcript; // Get the transcript from the event
-      setTranscript((prev) => prev + " " + result); // Set the transcript state
-      stopListening();
-    };
-  }
+
+  recognition.onresult = (event) => {
+    const result = event.results[0][0].transcript; // Get the transcript from the event
+    setTranscript((prev) => prev + " " + result); // Set the transcript state
+    stopListening();
+  };
 
   const [showtran, setShowtran] = useState(false);
 
